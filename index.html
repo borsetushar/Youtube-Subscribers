@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Documentation</title>
+  <style>
+    /* Add CSS styling to customize the appearance of the documentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+    h3,h2{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Backend Project : Youtube Subscribers</h1>
+  
+  <h2>Endpoints</h2>
+  
+  <h3>/subscribers</h3>
+  <p>This route shows a list of all subscribers with their details.</p>
+  <pre>GET /subscribers</pre>
+  
+  <h3>/subscribers/names</h3>
+  <p>This route shows the names and subscribed channels of all subscribers.</p>
+  <pre>GET /subscribers/names</pre>
+  
+  <h3>/subscribers/:id</h3>
+  <p>This route enables you to find a subscriber by their ID.</p>
+  <pre>GET /subscribers/:id</pre>
+  
+</body>
+</html>

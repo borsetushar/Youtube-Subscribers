@@ -1,0 +1,197 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-04T03:48:15.597Z",
+    "end": "2023-06-04T03:48:15.749Z",
+    "duration": 152,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1edc8646-d643-4cd9-ac58-45b6dd15e5bf",
+      "title": "",
+      "fullFile": "E:\\Backend Project 2\\Youtube sub\\Youtube Subscriber\\test\\subscribers.test.js",
+      "file": "\\test\\subscribers.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df0c2398-006e-494e-bf5d-6250e2426d8c",
+          "title": "subscribers API",
+          "fullFile": "E:\\Backend Project 2\\Youtube sub\\Youtube Subscriber\\test\\subscribers.test.js",
+          "file": "\\test\\subscribers.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "45be3867-ca75-4586-ba3b-47aa1ad4f93e",
+              "title": "GET /subscribers",
+              "fullFile": "E:\\Backend Project 2\\Youtube sub\\Youtube Subscriber\\test\\subscribers.test.js",
+              "file": "\\test\\subscribers.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "It should get all the subscribers",
+                  "fullTitle": "subscribers API GET /subscribers It should get all the subscribers",
+                  "timedOut": false,
+                  "duration": 74,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Make a request to the /subscribers endpoint\nchai.request(server)\n   .get(\"/subscribers\")\n    .end((err,response)=>{\n       // Assertions for response\n        response.should.have.status(200);\n        response.body.should.be.a('array');\n        response.body.length.should.be.eq(3);\n    done();    \n    });",
+                  "err": {},
+                  "uuid": "c74cbdcd-1c73-4fdb-89d7-5de60239e405",
+                  "parentUUID": "45be3867-ca75-4586-ba3b-47aa1ad4f93e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c74cbdcd-1c73-4fdb-89d7-5de60239e405"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 74,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "f52f15a3-9f3b-4f01-8d15-e375783159b8",
+              "title": "GET /subscribers/names",
+              "fullFile": "E:\\Backend Project 2\\Youtube sub\\Youtube Subscriber\\test\\subscribers.test.js",
+              "file": "\\test\\subscribers.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return and array of subscribers name and subscribedChannel",
+                  "fullTitle": "subscribers API GET /subscribers/names should return and array of subscribers name and subscribedChannel",
+                  "timedOut": false,
+                  "duration": 19,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Make a request to the /subscribers/names endpoint\nchai.request(server)\n   .get(\"/subscribers/names\")\n    .end((err,response)=>{\n         // Assertions for response\n        response.should.have.status(200);\n        response.body.should.be.a('array');\n        response.body.length.should.be.above(0);\n    done();    \n    });",
+                  "err": {},
+                  "uuid": "d8d70689-43d2-4959-8136-33979e0ad2e4",
+                  "parentUUID": "f52f15a3-9f3b-4f01-8d15-e375783159b8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d8d70689-43d2-4959-8136-33979e0ad2e4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 19,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "30c55103-fe32-47f3-a770-0d8dc022cee0",
+              "title": "GET /subscribers/:id",
+              "fullFile": "E:\\Backend Project 2\\Youtube sub\\Youtube Subscriber\\test\\subscribers.test.js",
+              "file": "\\test\\subscribers.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return the subscribers details by Id",
+                  "fullTitle": "subscribers API GET /subscribers/:id should return the subscribers details by Id",
+                  "timedOut": false,
+                  "duration": 21,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Make an asynchronous request to the /subscribers/:id endpoint\n           const response = await request(server).get(\"/subscribers/647bfc4d78582a2c30b8929f\");\n            // Assertions for response\n           expect(response.statusCode).to.equal(200);\n           expect(response.body._id).to.equal(\"647bfc4d78582a2c30b8929f\");",
+                  "err": {},
+                  "uuid": "e413ffe4-356a-4f36-a4c5-132d85c3393b",
+                  "parentUUID": "30c55103-fe32-47f3-a770-0d8dc022cee0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e413ffe4-356a-4f36-a4c5-132d85c3393b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 21,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
