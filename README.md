@@ -18,7 +18,7 @@
             
          Installation :
           
-            01. Clone the Repo :
+            01.Clone the Repo : https://github.com/borsetushar/Youtube-Subscribers.git
             02.Navigate to the Project directory : cd youtube-subscribers
             03.Install the dependencies with the npm Install
             04.Configure the MongoDB connection by setting the DATABASE_URL environment variable in a .env file:
